@@ -35,7 +35,7 @@ $(document).ready(function() {
     
     //if win
     function win() {
-        alert("Great, you just earn a score, only one...")
+        alert("Great, you just earn a score, only one point...")
         wins++;
         $("#numberWins").html(wins);
         reset();
@@ -49,56 +49,40 @@ $(document).ready(function() {
         reset();
     }
     
+    //check if win or lose, will call it later
+    function checkNumber() {
+        if (counter === targetNumber) {
+            win();
+        } else if (counter > targetNumber) {
+            lose();
+        }
+    }
+    
     //on click function - blue 
     $("#blue").on("click", function () {
         counter += number1;
-        $("#scoreboard").html(counter);
-        
-        if (counter === targetNumber) {
-            win();
-        }
-    
-        else if (counter >= targetNumber) {
-          lose();
-        }
+        $("#scoreboard").html(counter)
+  		checkNumber();
     });
     
     //on click function - red 
     $("#red").on("click", function () {
         counter += number2;
         $("#scoreboard").html(counter)
-    
-        if (counter === targetNumber) {
-          win();
-        }
-        else if (counter >= targetNumber) {
-          lose();
-        }
+  		checkNumber();
     });
     
     //on click function - green 
     $("#green").on("click", function () {
         counter += number3;
         $("#scoreboard").html(counter)
-    
-        if (counter === targetNumber) {
-          win();
-        }
-        else if (counter >= targetNumber) {
-          lose();
-        }
+  		checkNumber();
     });
     
     //on click function - purple 
     $("#purple").on("click", function () {
         counter += number4;
         $("#scoreboard").html(counter)
-    
-        if (counter === targetNumber) {
-          win();
-        }
-        else if (counter >= targetNumber) {
-          lose();
-        }
-      })
+  		checkNumber();
+    });
     })
