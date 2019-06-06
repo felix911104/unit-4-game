@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Crystals Collector</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/fde0c6cd5b.js"></script>
+
+</head>
+
+<body background="assets/images/crossline-lines.png">
+    <div class="container">
+        <header>
+            <span class="badge badge-secondary text-black-50">
+                <h2>Crystals Collector <i class="far fa-meh-rolling-eyes"></i></h1>
+            </span>
+        </header>
+
+
+        <div id="instructions">
+
+            <p><i class="fas fa-random"></i> You will be given a random (target)number at the start of the game <i
+                    class="fas fa-meh-blank"></i></p>
+
+            <p><i class="fas fa-plus"></i> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your score <i class="fas fa-meh-blank"></i></p>
+
+            <p><i class="fas fa-calculator"></i> You win the game by matching your total score to a random number. You lose the game if your score goes above the random number <i class="fas fa-meh-blank"></i></p>
+
+            <p><i class="far fa-eye-slash"></i> The value of each crystal is hidden from you until you click on it <i class="fas fa-meh-blank"></i></p>
+
+            <p><i class="fas fa-meteor"></i> A new value will be assigned to each crystal every time the game starts <i class="fas fa-meh-blank"></i>...<i class="fas fa-meh-blank"></i>...<i class="fas fa-meh-blank"></i>...</p>
+
+        </div>
+
+        <div id="wrapper">
+            <p id="bigger">YOUR TARGET NUMBER => <i class="fas fa-calculator"></i> :</p>
+            <div id="number-to-guess"></div>
+            <div id="standings">
+                <p>
+                    <i class="far fa-grin-wink"></i> Wins:
+                    <span id="numberWins"></span>
+                    <br>
+
+                    <i class="fas fa-frown"></i> Losses:
+                    <span id="numberLosses"></span>
+                </p>
+            </div>
+        </div>
+
+
+        <div id="crystals">
+            <img class="crystal-images" id="blue" src="assets/images/blue.png" alt="bluecrystal">
+            <img class="crystal-images" id="red" src="assets/images/red.png" alt="redcrystal">
+            <img class="crystal-images" id="green" src="assets/images/green.png" alt="greencrystal">
+            <img class="crystal-images" id="purple" src="assets/images/purple.png" alt="purplecrystal">
+        </div>
+
+        <br>
+        <div id="scoretitle">
+            <p id="bigger"><i class="fas fa-hand-spock"></i> YOUR TOTAL SCORE IS:</p>
+        </div>
+
+        <div id="scoreboard"></div>
+        <br>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+
+    </div>
+</body>
+
+</html>
